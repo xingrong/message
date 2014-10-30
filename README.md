@@ -18,9 +18,11 @@
 
 curl -d 'from=xingrong@163.com' -d 'to=xingrong@163.com' -d 'subject=test' -d 'body=<body>test</body>' http://message.cn/mail
 
+<br />
 //有附件
 
 curl -F 'from=xingrong@163.com' -F 'to=xingrong@163.com;test@163.com' -F 'cc=xingrong@163.com' -F 'subject=test for mailservice!' -F 'attachments_1=@/home/xingrong/ymake' -F 'attachments_2=@/home/xingrong/test' -F 'body=@/home/xingrong/test' http://message.cn/mail
+
 
 示例仅供参考，对curl命令使用有疑问，可访问http://curl.haxx.se/获得帮助
 
