@@ -1,12 +1,13 @@
+#消息中心
 ##干什么用？
-提供RESTful接口，通过163邮件系统发送邮件。
-* 监控邮件发送，异常自动报警;
+提供RESTful接口，发送邮件以及发送短信（需要第三方短信接口支持）。
+* 监控消息发送，异常自动报警;
 * 可以自定义过滤策略;
 * 提供优先级控制发送;
 
 ##怎么用？
 ###SHELL
-####通知中心邮件服务SHELL示例
+####消息中心邮件服务SHELL示例
 #####//没有附件
 ```Shell
 curl -d 'from=xingrong@163.com' -d 'to=xingrong@163.com' -d 'subject=test' -d 'body=<body>test</body>' http://message.cn/mail
@@ -18,7 +19,7 @@ curl -F 'from=xingrong@163.com' -F 'to=xingrong@163.com;test@163.com' -F 'cc=xin
 >示例仅供参考，对curl命令使用有疑问，可访问 http://curl.haxx.se/ 获得帮助
 
 ###PHP
-####邮件服务PHP示例
+####消息中心邮件服务PHP示例
 ```php
 <?php
 $post_data = array(
@@ -45,7 +46,7 @@ echo $curlRet;
 ```
 
 ###Python
-####通知中心邮件服务Python示例
+####消息中心邮件服务Python示例
 ```python
 import urllib
 import urllib2
