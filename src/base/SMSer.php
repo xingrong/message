@@ -165,14 +165,14 @@ class SMSer {
         }
         $length = strlen($params);
         //创建socket连接
-        $fp = fsockopen("sdk.sms.cn",80,$errno,$errstr,10);// or exit($errstr."--->".$errno);
+        $fp = fsockopen("sdk.test.cn",80,$errno,$errstr,10);// or exit($errstr."--->".$errno);
         if(!$fp) {
             $this->SMSError("fsockopen",$errstr."--->".$errno);
             return false;
         }
         //构造post请求的头
         $header = "POST /z_mdsmssend.aspx HTTP/1.1\r\n";
-        $header .= "Host:sdk2.entinfo.cn\r\n";
+        $header .= "Host:sdk2.test.cn\r\n";
         $header .= "Content-Type: application/x-www-form-urlencoded\r\n";
         $header .= "Content-Length: ".$length."\r\n";
         $header .= "Connection: Close\r\n\r\n";

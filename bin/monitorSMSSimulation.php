@@ -15,7 +15,7 @@ $postData = array(
 );
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'http://message.ip.cn/sms');
-curl_setopt($ch, CURLOPT_HTTPHEADER,array('Host:message.goso.cn'));
+curl_setopt($ch, CURLOPT_HTTPHEADER,array('Host:message.cn'));
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);

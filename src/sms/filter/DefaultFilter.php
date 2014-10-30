@@ -111,7 +111,7 @@ class DefaultFilter {
      */
     private function doFilter() {
         //测试simulation短信
-        if('15210651786' == $this->_notification['phone'] && 
+        if('13512341234' == $this->_notification['phone'] && 
             'test' == $this->_notification['content']) {
                 $this->_ret = '';
                 return true;

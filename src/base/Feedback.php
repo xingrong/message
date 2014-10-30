@@ -37,7 +37,7 @@ class Feedback {
     private $_feedback;
 
     /**
-     * @brief    管理员邮箱，默认为xingrong@jike.com
+     * @brief    管理员邮箱，默认为xingrong@message.com
      * @var string
      */
     private $_admin;

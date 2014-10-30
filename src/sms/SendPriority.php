@@ -122,7 +122,7 @@ class SendPriority{
 			$this->_notification['feedback'] = $this->_paramArray['feedback'];
 		}
 		else {
-			$this->_notification['feedback'] = 'xingrong@jike.com';
+			$this->_notification['feedback'] = 'xingrong@message.com';
 			//throw new NotiException('Feedback parameter is null!','10102');
 		}
 		if(!filter_var($this->_notification['feedback'], FILTER_VALIDATE_EMAIL)) {
