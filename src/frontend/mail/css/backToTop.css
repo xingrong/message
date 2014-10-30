@@ -1,0 +1,17 @@
+.backToTop {
+    display: none;
+    width: 24px;
+    line-height: 1.4;
+    padding: 5px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    right: 14px;
+    bottom: 48px;
+    bottom: "auto";
+    cursor: pointer;
+    opacity: .6;
+    filter: Alpha(opacity=60);
+ }
