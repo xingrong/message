@@ -1,4 +1,5 @@
 #!/bin/bash
+# Author: xingrong0804@163.com (Xing Rong)
 
 keepalivedProcess=0
 keepalivedProcess=`ps -ef | grep /usr/sbin/keepalived | grep -v grep | wc -l`

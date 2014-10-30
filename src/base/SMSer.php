@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -81,7 +80,7 @@ class SMSer {
      */
     private function sendCatSMS($phone,$content) {
         $ch = curl_init();
-        $msgURL = "http://192.168.10.25/database.php?phoneno=" . urlencode($phone) . "&content=" . urlencode($content);
+        $msgURL = "http://ipofcat/database.php?phoneno=" . urlencode($phone) . "&content=" . urlencode($content);
         curl_setopt($ch, CURLOPT_URL, $msgURL);
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -149,7 +148,7 @@ class SMSer {
             'sn' => $this->_thirdSMS['thirdSN'], //提供的账号
             'pwd' => strtoupper(md5($this->_thirdSMS['thirdSN'] . $this->_thirdSMS['thirdPWD'])), //此处密码需要加密 加密方式为 md5(sn+password) 32位大写
             'mobile' => $phone,//手机号 多个用英文的逗号隔开 post理论没有长度限制.推荐群发一次小于等于10000个手机号
-            'content' => iconv("UTF-8","GB2312//IGNORE",strip_tags($content)."[JIKE]") ,//短信内容
+            'content' => iconv("UTF-8","GB2312//IGNORE",strip_tags($content)."[message]") ,//短信内容
             'ext' => '',
             'rrid' => 'success',//默认空 如果空返回系统生成的标识串 如果传值保证值唯一 成功则返回传入的值
             'stime' => ''//定时时间 格式为2011-6-29 11:09:21
@@ -166,7 +165,7 @@ class SMSer {
         }
         $length = strlen($params);
         //创建socket连接
-        $fp = fsockopen("sdk2.entinfo.cn",80,$errno,$errstr,10);// or exit($errstr."--->".$errno);
+        $fp = fsockopen("sdk.sms.cn",80,$errno,$errstr,10);// or exit($errstr."--->".$errno);
         if(!$fp) {
             $this->SMSError("fsockopen",$errstr."--->".$errno);
             return false;

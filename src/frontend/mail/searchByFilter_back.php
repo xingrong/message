@@ -36,7 +36,7 @@ $search_time = $array_time['year'] . "-" . $array_time['mon'] . "-" . $array_tim
 <h4><?php echo $search_time . " ";?>被过滤的重复短信</h4>
 <hr />
 <div class="divLeft">
-    <input type="button" value="返回首页" onClick="window.location = 'http://message.goso.cn/sms/status.php?get_time=<?php echo $get_time;?>'" value="" />
+    <input type="button" value="返回首页" onClick="window.location = 'http://message.cn/sms/status.php?get_time=<?php echo $get_time;?>'" value="" />
 </div>
 <?php
 require_once(__DIR__ . "/conf/mysqlInfo.php");

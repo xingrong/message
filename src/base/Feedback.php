@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -66,7 +65,7 @@ class Feedback {
         $this->_debug = false;
         $this->_log_file = "feedback.log";
         $this->_notification = $notification;
-        $this->_admin = 'xingrong@jike.com';
+        $this->_admin = 'xingrong0804@163.com';
         if(is_array($this->_notification)) {
             $this->_feedback = $this->_notification['feedback'];
         }
@@ -107,10 +106,10 @@ class Feedback {
     public function sendMailFeedback($info,$body='',$attachments='') {
         $mailRet = $this->_mailer->SendMail(
             $this->_feedback,
-            'message.goso.cn@jike.com',
+            'message@message.com',
             $this->_admin,
             '',
-            'Message Send Failed from message.goso.cn',
+            'Message Send Failed from message',
             $info."<br>".$body,
             $attachments
         );

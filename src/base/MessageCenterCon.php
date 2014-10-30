@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 require_once __DIR__ . '/conf/mysqlConf.php';

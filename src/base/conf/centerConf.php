@@ -1,9 +1,8 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
-$GLOBALS['CENTER_IP'] = "10.100.66.6";
+$GLOBALS['CENTER_IP'] = "message.ip.cn";
 
 ?>

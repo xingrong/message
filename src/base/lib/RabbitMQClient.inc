@@ -1,13 +1,6 @@
 <?php
-/**
- * Copyright (c) 2012 Jike Inc. All Rights Reserved.
- * Author: zhuangcanwei@jike.com (Zhuang Canwei)
- * Date 2012/08/06
- **/
 
 require_once("amqp.inc");
-
-
 
 /**
 *  RabbitMQ Client's message format

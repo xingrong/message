@@ -1,6 +1,3 @@
--- Copyright 2012 Jike Inc. All Rights Reserved.
--- Author: xingrong@jike.com (Xing Rong)
-
 CREATE TABLE log 
 (
     id              int not null primary key AUTO_INCREMENT,

@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -16,7 +15,6 @@ $logger = new Logger("mail.log");
 $monitor = new Monitor();
 //获取POST参数
 $paramArray = $_POST;
-$paramArray['to'] = str_replace("zhangxiaol@jike.com","zhangxiaolin@jike.com",$paramArray['to']);
 //访问者IP
 if(isset($_SERVER['REMOTE_ADDR'])) {
     $paramArray['VISITOR_IP'] = $_SERVER['REMOTE_ADDR'];

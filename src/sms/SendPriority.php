@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -258,7 +257,7 @@ class SendPriority{
 		if(!$bind){
 			//TODO(xingrong):die("Failed to bind LDAP server.\n");
 		}
-		$result = ldap_search($conn, 'ou=people,dc=goso,dc=cn', "(&(uid={$username}))", array('mobile'));
+		$result = ldap_search($conn, 'ou=people,dc=test,dc=cn', "(&(uid={$username}))", array('mobile'));
 		if(!$result){
 			return false;
 		}
@@ -293,7 +292,7 @@ class SendPriority{
 		if(!$bind){
 			//TODO(xingrong):die("Failed to bind LDAP server.\n");
 		}
-		$result = ldap_search($conn, 'ou=people,dc=goso,dc=cn', "(&(mobile={$mobile}))", array('uid'));
+		$result = ldap_search($conn, 'ou=people,dc=test,dc=cn', "(&(mobile={$mobile}))", array('uid'));
 		if(!$result){
 			//  return false;
 		}

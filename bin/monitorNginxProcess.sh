@@ -1,4 +1,5 @@
 #!/bin/bash
+# Author: xingrong0804@163.com (Xing Rong)
 
 nginxProcess=0
 nginxProcess=`ps -ef | grep /var/gs/local/nginx/sbin/nginx | grep -v grep | wc -l`

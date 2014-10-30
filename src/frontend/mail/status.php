@@ -63,9 +63,9 @@ echo "<table>
     <th width=\"200\"><font color=\"blue\">队列等待总数</font></th>
     </tr>";
 echo "<tr>";
-echo "<td><input type=\"button\" value=\"前一天\" onClick=\"window.location = 'http://message.goso.cn/mail/status.php?get_time=" . strtotime("-1 day",$get_time) . "'\" value=\"\" />
-    " . " " .  $search_time . " " . "<input type=\"button\" value=\"后一天\" onClick=\"window.location = 'http://message.goso.cn/mail/status.php?get_time=" . strtotime("+1 day",$get_time) . "'\" value=\"\" />
-    <input type=\"button\" value=\"今天\" onClick=\"window.location = 'http://message.goso.cn/mail/status'\" value=\"\" /></td>";
+echo "<td><input type=\"button\" value=\"前一天\" onClick=\"window.location = 'http://message.cn/mail/status.php?get_time=" . strtotime("-1 day",$get_time) . "'\" value=\"\" />
+    " . " " .  $search_time . " " . "<input type=\"button\" value=\"后一天\" onClick=\"window.location = 'http://message.cn/mail/status.php?get_time=" . strtotime("+1 day",$get_time) . "'\" value=\"\" />
+    <input type=\"button\" value=\"今天\" onClick=\"window.location = 'http://message.cn/mail/status'\" value=\"\" /></td>";
 echo "<td>" . $row_sent_1['count(id)'] . "<a title=\"" . $row_sent_2['count(id)'] . "\" href=\"searchBySent.php?sent=1&get_time={$get_time}\">  查看</td>";
 echo "<td>" . $row_sent_2['count(id)'] . "<a title=\"" . $row_sent_2['count(id)'] . "\" href=\"searchBySent.php?sent=2&get_time={$get_time}\">  查看</td>";
 echo "<td>" . $queueCount . "</td>";
@@ -76,9 +76,9 @@ echo "<hr />";
 ?>
 
 <div class="divLeft">
-    <input type="button" value="用户手册" onClick="window.location = 'http://confluence.goso.cn/pages/viewpage.action?pageId=11442972'" value="" />
-    <input type="button" value="需求征集" onClick="window.location = 'http://confluence.goso.cn/pages/viewpage.action?pageId=11440687'" value="" />
-    <input type="button" value="短信服务" onClick="window.location = 'http://message.goso.cn/sms/status'" value="" />
+    <input type="button" value="用户手册" onClick="window.location = 'http://confluence.cn/pages/viewpage.action?pageId=11442972'" value="" />
+    <input type="button" value="需求征集" onClick="window.location = 'http://confluence.cn/pages/viewpage.action?pageId=11440687'" value="" />
+    <input type="button" value="短信服务" onClick="window.location = 'http://message.cn/sms/status'" value="" />
 </div>
 
 <?php

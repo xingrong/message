@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -14,23 +13,6 @@ $feedback = new Feedback();
 $logger = new Logger("sms.log");
 //获取POST参数
 $paramArray = $_POST;
-//针对lx和yf的网管特别设置
-if(!empty($paramArray['username']) && empty($paramArray['phone'])) {
-    if('LX_IDC' == $paramArray['username']) {
-        $paramArray['phone'] = '15611081275';
-    }
-    if('YF_IDC' == $paramArray['username']) {
-        $paramArray['phone'] = '18001328118';
-    }
-}
-if(!empty($paramArray['phone']) && empty($paramArray['username'])) {
-    if('15611081275' == $paramArray['phone']) {
-        $paramArray['username'] = 'LX_IDC';
-    }
-    if('18001328118' == $paramArray['phone']) {
-        $paramArray['username'] = 'YF_IDC';
-    }
-}
 //访问者IP
 if(isset($_SERVER['REMOTE_ADDR'])) {
     $paramArray['VISITOR_IP'] = $_SERVER['REMOTE_ADDR'];

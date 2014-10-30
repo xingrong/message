@@ -1,4 +1,5 @@
 #!/bin/bash
+# Author: xingrong0804@163.com (Xing Rong)
 
 phpProcess=0
 phpProcess=`ps -ef | grep /var/gs/local/php/etc/php-fpm | grep -v grep | wc -l`

@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -26,7 +25,7 @@ foreach ($argv as $key=>$value) {
 echo $params;
 $length = strlen($params);
 //创建socket连接
-$fp = fsockopen("sdk2.entinfo.cn",80,$errno,$errstr,10) or exit($errstr."--->".$errno);
+$fp = fsockopen("sdk2.sms.cn",80,$errno,$errstr,10) or exit($errstr."--->".$errno);
 //构造post请求的头
 $header = "POST /webservice.asmx/GetBalance HTTP/1.1\r\n";
 $header .= "Host:sdk2.entinfo.cn\r\n";

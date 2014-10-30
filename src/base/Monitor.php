@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -65,8 +64,8 @@ class Monitor {
         $this->_debug = false;
         $this->_log_file = "monitor.log";
         $this->_admin = array(
-            'mail' => 'xingrong@jike.com',
-            'phone' => '18910075646',
+            'mail' => 'xingrong0804@163.com',
+            'phone' => '13512341234',
         );
         $this->_mailer = new Mailer();
         $this->_smser = new SMSer();
@@ -94,7 +93,7 @@ class Monitor {
     public function sendMailAlarm($alarm_msg,$cc='') {
         $mailRet = $this->_mailer->SendMail(
             $this->_admin['mail'],
-            'message.goso.cn@jike.com',
+            'message@message.com',
             $cc,
             '',
             'Alarm from messageCenter',
@@ -311,8 +310,8 @@ class Monitor {
         if($this->_con_mc->isAlarmValid($service,$param) === true) { //每30分钟报警一次
             $this->_logger->writeLog($service,$level,$param,$log);
             $cc = array(
-                'phone' => '13466672883',
-                'mail' => 'huangfuxin@jike.com',
+                'phone' => '13512221222',
+                'mail' => 'admin1@message.com',
             );
             $this->sendAlarm($log,$cc);
         }
@@ -351,8 +350,8 @@ class Monitor {
         if($this->_con_mc->isAlarmValid($service,$param,43200) === true) { //每十二小时报警一次
             $this->_logger->writeLog($service,$level,$param,$log);
             $cc = array(
-                'phone' => '18910036781',
-                'mail' => 'jiweixiao@jike.com',
+                'phone' => '12511111111',
+                'mail' => 'adminofbalance@message.com',
             );
             $this->sendAlarm($log,$cc);
         }

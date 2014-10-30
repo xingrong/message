@@ -1,13 +1,12 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
 $priorityMQ=array();
 $priorityMQ['serverAddress'] = array(                           //serverAddress
-    array('host'=>'10.100.4.253','port'=>5672),
-    array('host'=>'10.100.4.254','port'=>5672),
+    array('host'=>'ip1','port'=>5672),
+    array('host'=>'ip2','port'=>5672),
 );
 $priorityMQ['USER'] = 'noticenter';                             //User name
 $priorityMQ['PASS'] = 'noticenter';		                        //User password

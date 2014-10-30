@@ -77,7 +77,7 @@ echo "</table>";
 echo "<hr />";
 ?>
 <div class="divLeft">
-    <input type="button" value="返回首页" onClick="window.location = 'http://message.goso.cn/sms/status.php?get_time=<?php echo $get_time;?>'" value="" />
+    <input type="button" value="返回首页" onClick="window.location = 'http://message.cn/sms/status.php?get_time=<?php echo $get_time;?>'" value="" />
 </div>
 <?php
 //短信信息

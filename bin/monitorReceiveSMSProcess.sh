@@ -1,4 +1,5 @@
 #!/bin/bash
+# Author: xingrong0804@163.com (Xing Rong)
 
 receiveSMSProcess=0
 receiveSMSProcess=`ps -ef | grep /var/gs/message/src/sms/ReceiveSMS.php | grep -v grep | wc -l`

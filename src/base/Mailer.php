@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -44,7 +43,7 @@ class Mailer{
     function __construct() {
         date_default_timezone_set('Asia/Shanghai');//设定时区东八区
         $this->_defaultConf = array(
-            'Host'=>'smtp.jike.com',
+            'Host'=>'smtp.163.com',
             'Port'=>25,
         );
         $this->_mailer = new PHPMailer(true);//捕获异常

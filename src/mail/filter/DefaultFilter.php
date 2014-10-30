@@ -1,6 +1,5 @@
 <?php
-# Copyright 2012 Jike.com Inc. All Rights Reserved.
-# Author: xingrong@jike.com (Xing Rong)
+# Author: xingrong0804@163.com (Xing Rong)
 
 chdir(dirname(__FILE__));
 
@@ -110,8 +109,8 @@ class DefaultFilter {
      * @return   boolean true标识过滤完成
      */
     private function doFilter() {
-        if('xingrong@jike.com' == $this->_notification['to'] && 
-            'xingrong@jike.com' == $this->_notification['from'] && 
+        if('xingrong@message.com' == $this->_notification['to'] && 
+            'xingrong@message.com' == $this->_notification['from'] && 
             'test' == $this->_notification['body']
         ) {
             $this->_ret = '';
