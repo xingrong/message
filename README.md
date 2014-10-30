@@ -3,61 +3,107 @@
 提供RESTful接口，通过163邮件系统发送邮件。
 
 1.监控邮件发送，异常自动报警;
+
 2.可以自定义过滤策略;
+
 3.提供优先级控制发送;
 
 <h2>怎么用？</h2>
 
 <h3>SHELL</h3>
+
 通知中心邮件服务SHELL示例
+
 //没有附件
+
 curl -d 'from=xingrong@163.com' -d 'to=xingrong@163.com' -d 'subject=test' -d 'body=<body>test</body>' http://message.cn/mail
+
 //有附件
+
 curl -F 'from=xingrong@163.com' -F 'to=xingrong@163.com;test@163.com' -F 'cc=xingrong@163.com' -F 'subject=test for mailservice!' -F 'attachments_1=@/home/xingrong/ymake' -F 'attachments_2=@/home/xingrong/test' -F 'body=@/home/xingrong/test' http://message.cn/mail
 
 示例仅供参考，对curl命令使用有疑问，可访问http://curl.haxx.se/获得帮助
 
 <h3>PHP</h3>
+
 邮件服务PHP示例
+
 <?php
+
 $post_data = array(
+
     'from' => 'xingrong@163.com',
+    
     'to' => 'xingrong@163.com',
+    
     'subject' => 'test',
+    
     'body' => '<body>test</body>',
+    
     );
+    
 $mcURL = "http://message.cn/mail";
+
 $ch = curl_init();
+
 curl_setopt($ch, CURLOPT_HEADER, 0);
+
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
 curl_setopt($ch, CURLOPT_URL, $mcURL);
+
 curl_setopt($ch, CURLOPT_POST, 1);
+
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+
 $curlRet = curl_exec($ch);
+
 curl_close($ch);
+
 if(false === $curlRet) {
+
     //TODO
+    
 }
+
 echo $curlRet;
+
 //TODO $curlRet with jsondecode()
+
 ?>
 
 <h3>Python</h3>
+
 通知中心邮件服务Python示例
+
 import urllib
+
 import urllib2
+
 import httplib
+
 def sendMail():
+
     post_data = urllib.urlencode({
+    
       'from' : 'xingrong@163.com',
+      
       'to' : 'xingrong@163.com',
+      
       'subject' : 'test',
+      
       'body' : '<body>test</body>',
+      
       })
+      
     request = urllib2.Request("http://message.cn/mail", post_data)
+    
     ret = urllib2.urlopen(request)
+    
     print ret.read()
+    
 if __name__ == "__main__":
+
     sendMail()
 
 <h2>有哪些参数？</h2>
@@ -252,6 +298,9 @@ status和msg的变量类型为string
 <h2>还有什么？</h2>
 
 1.附件的input name不可设为body；
+
 2.邮件正文文件不能为空文件，导入邮件正文功能不支持多文件合并导入；
+
 3.按照php的默认设置，上传文件总量的上限为2M；
+
 4.按照RabbitMQ Client的默认设置，post data总量的上限为128K，上传文件除外;
